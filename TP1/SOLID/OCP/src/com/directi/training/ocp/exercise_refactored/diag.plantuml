@@ -1,0 +1,32 @@
+@startuml 
+
+abstract class ResourceType {
+    public abstract void markSlotFree(int resourceId)
+    public abstract void markSlotBusy(int resourceId)
+    public abstract int findFreeSlot()
+}
+
+class Space extends ResourceType{
+    public void markSlotFree(int resourceId)
+    public void markSlotBusy(int resourceId)
+    public int findFreeSlot()
+}
+
+class Time extends ResourceType{
+    public void markSlotFree(int resourceId)
+    public void markSlotBusy(int resourceId)
+    public int findFreeSlot()
+}
+
+class ResourceAllocator
+{
+    private static final int INVALID_RESOURCE_ID
+
+    public int allocate(ResourceType resourceType)
+    public void free(ResourceType resourceType, int resourceId)
+
+}
+
+ResourceAllocator -. ResourceType
+
+@enduml

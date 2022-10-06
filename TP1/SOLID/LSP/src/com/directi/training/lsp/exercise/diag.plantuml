@@ -1,0 +1,32 @@
+@startuml 
+
+class Duck
+{
+    public void quack()
+    public void swim()
+}
+
+class ElectronicDuck extends Duck
+{
+    private boolean _on
+
+    public void quack()
+    public void swim()
+    public void turnOn()
+    public void turnOff()
+
+}
+
+class Pool
+{
+    public void run()
+
+    private void quack(Duck... ducks)
+
+    public static void main(String[] args)
+}
+
+Pool -. Duck
+Pool -. ElectronicDuck
+
+@enduml 

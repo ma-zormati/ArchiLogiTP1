@@ -1,0 +1,67 @@
+@startuml 
+
+class EncodingModule
+{
+    public void encode(ReaderInterface reader, WriterInterface writer) throws IOException
+
+}
+
+class EncodingModuleClient
+{
+    public static void main(String[] args) throws IOException
+
+}
+
+class MyDatabase
+{
+    private static Map<Integer, String> _data
+    private static int _count
+
+    public int write(String inputString)
+}
+
+interface ReaderInterface {
+    String read() throws IOException
+}
+
+interface WriterInterface {
+    void write(String ch) throws IOException
+}
+
+class MyDatabaseWriter implements WriterInterface{
+    
+}
+
+class MyFileReader implements ReaderInterface {
+    private String _fileName
+
+    public MyFileReader(String fileName)
+
+}
+
+class MyFileWriter implements WriterInterface{
+    private String _fileName
+
+    public MyFileWriter(String fileName)
+
+}
+
+class MyNetworkReader implements ReaderInterface{
+    private String _protocol
+    private String _host
+    private String _file
+
+    public MyNetworkReader(String protocol, String host, String file)
+
+}
+
+
+EncodingModuleClient -. EncodingModule
+
+EncodingModule -. ReaderInterface
+EncodingModule -. WriterInterface
+
+
+MyDatabaseWriter -. MyDatabase
+
+@enduml 

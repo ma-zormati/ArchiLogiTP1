@@ -1,0 +1,27 @@
+@startuml 
+
+class EncodingModule
+{
+    public void encodeWithFiles() throws IOException
+    public void encodeBasedOnNetworkAndDatabase() throws IOException
+
+}
+
+class EncodingModuleClient
+{
+    public static void main(String[] args) throws IOException
+
+}
+
+class MyDatabase
+{
+    private static Map<Integer, String> _data
+    private static int _count
+
+    public int write(String inputString)
+}
+
+EncodingModuleClient -. EncodingModule
+EncodingModule -. MyDatabase
+
+@enduml 

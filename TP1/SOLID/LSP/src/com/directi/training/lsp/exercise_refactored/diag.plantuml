@@ -1,0 +1,45 @@
+@startuml 
+
+class Duck implements DuckInterface
+{
+
+}
+
+class ElectronicDuck extends Duck
+{
+    private boolean _on
+
+    public ElectronicDuck ()
+    public void quack()
+    public void swim()
+    public void turnOn()
+    public void turnOff()
+
+}
+
+class Pool
+{
+    public void run()
+
+    private void quack(Duck... ducks)
+
+    public static void main(String[] args)
+}
+
+interface DuckInterface {
+    
+    
+    
+    public void swim() throws DuckException
+    public void quack() throws DuckException
+}
+
+class DuckException{
+        public void duckExcep (String msg)
+}
+
+Pool -. Duck
+Pool -. ElectronicDuck
+DuckInterface -> DuckException
+
+@enduml 
